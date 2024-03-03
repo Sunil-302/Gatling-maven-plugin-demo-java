@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.gatling.demo</groupId>
-  <artifactId>gatling-maven-plugin-demo-java</artifactId>
+  <artifactId>Gatling-maven-plugin-demo-java</artifactId>
   <version>3.10.3</version>
 
   <properties>
@@ -47,6 +47,15 @@
         <configuration>
           <!-- Enterprise Cloud (https://cloud.gatling.io/) configuration reference: https://gatling.io/docs/gatling/reference/current/extensions/maven_plugin/#working-with-gatling-enterprise-cloud -->
           <!-- Enterprise Self-Hosted configuration reference: https://gatling.io/docs/gatling/reference/current/extensions/maven_plugin/#working-with-gatling-enterprise-self-hosted -->
+            <!--   ...  -->
+            <runMultipleSimulations>true</runMultipleSimulations>
+            <includes>
+              <include>computerdatabase.API.*</include>
+            </includes>
+            <excludes>
+              <exclude>my.package.IgnoredSimulation</exclude>
+            </excludes>
+
         </configuration>
       </plugin>
     </plugins>

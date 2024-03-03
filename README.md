@@ -16,3 +16,19 @@ It includes:
 * sample [Simulation](https://gatling.io/docs/gatling/reference/current/general/concepts/#simulation) class,
   demonstrating sufficient Gatling functionality
 * proper source file layout
+
+*Running INDIVIDUAL scripts
+
+	mvn gatling:test -D"gatling.simulationClass=computerdatabase.API.API_Test_feeders_03"
+
+*Running ALL scripts
+
+	mvn gatling:test
+
+*Execute Windows batch command for JENKINS (code in LOCAL)
+
+
+	d:
+	cd D:\SoftwareEngineer\PerformanceTesting\Gatling\GatlingJavaProject\O-	gatling-maven-plugin-demo-java
+	mvn gatling:test -	Dgatling.simulationClass=computerdatabase.API.API_Test_feeders_03
+

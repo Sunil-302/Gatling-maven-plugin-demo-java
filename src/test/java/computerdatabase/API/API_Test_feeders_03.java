@@ -39,12 +39,10 @@ public class API_Test_feeders_03 extends Simulation {
                                     , pause(1))
             );
 
-
     //setUp
-
     {
         setUp(
-                scn.injectOpen(rampUsers(1).during(0))
+                scn.injectOpen(rampUsers(10).during(5))
         ).protocols(httpProtocol);
     }
 
